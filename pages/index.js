@@ -11,24 +11,27 @@ const heroProps = {
 const agencyProps = {
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
-  image: { src: "/img/video.png", alt: "", width: 1000, height: 1000 },
+  image: { src: "/img/video.png", alt: "", width: 1100, height: 1800 },
   cards: [
     {
       title: "Brief",
-      description:
-        "Complete brief writing or simple guidance on what to include,we've got you covered.",
       image: { src: "/img/icon.png", alt: "", width: 100, height: 100 },
+      description: {
+        __html: "Complete <span style='font-weight: 600'>brief writing or simple guidance</span> on what to include,we've got you covered.",
+      },
     },
     {
       title: "Search",
-      description:
-        "In-depth agency search covering;criteria matching, door knocking and due-dilligence vetting.",
+      description: {
+        __html: "In-depth agency search covering;<span style='font-weight: 600'>criteria matching</span>, door knocking and due-dilligence vetting."
+      },
       image: { src: "/img/icon.png", alt: "", width: 100, height: 100 },
     },
     {
       title: "Pitch",
-      description:
-        "Comprehensive pitch management, including comms,diary management and pitch hosting.",
+      description: {
+        __html: "Comprehensive <span style='font-weight: 600'>pitch management</span>, including comms,diary management and pitch hosting."
+      },
       image: { src: "/img/icon.png", alt: "", width: 100, height: 100 },
     },
   ],

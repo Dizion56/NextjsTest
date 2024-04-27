@@ -11,6 +11,7 @@ import {
 } from "./elements.jsx";
 
 export const Agency = ({ title, description, image, cards }) => {
+  let cardIndex = 0;
   return (
     <StyledContainer>
       <StyledTextContainer>
@@ -29,7 +30,7 @@ export const Agency = ({ title, description, image, cards }) => {
         </StyledImageContainer>
         <StyledCardContainer>
           {cards.map((card) => (
-            <StyledCard key={card.title} {...card} />
+            <StyledCard key={card.title} index={cardIndex++} {...card}  />
           ))}
         </StyledCardContainer>
       </StyledBodyContainer>

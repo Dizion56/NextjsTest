@@ -8,9 +8,9 @@ import {
 } from "./elements.jsx";
 
 // The Card to be exported goes here
-export const Card = ({ title, description, image, ...props }) => {
+export const Card = ({ index, title, description, image, ...props }) => {
   return (
-    <StyledCardContainer>
+    <StyledCardContainer index={index}>
       <StyledImageContainer>
         <Image
           layout="responsive"
@@ -22,7 +22,7 @@ export const Card = ({ title, description, image, ...props }) => {
       </StyledImageContainer>
       <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
+        <StyledDescription dangerouslySetInnerHTML={description} />
       </StyledTextContainer>
     </StyledCardContainer>
   );
