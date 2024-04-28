@@ -19,8 +19,8 @@ export const StyledDescription = styled((props) => (
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   color: black;
-  width: 450px;
   font-family: sans-serif;
+  max-width: 300px;
 `;
 
 export const StyledImageContainer = styled(({ ...props }) => (
@@ -42,10 +42,16 @@ export const StyledCardContainer = styled(({ index, height, ...props }) => (
   align-items: center;
   gap: 1rem;
   padding: .8rem .5rem .8rem .5rem;
-  width: ${({ index }) => 400 + index * 30}px;
+  width: calc(28vw + ${({ index }) => index * 30}px);
   background-color: rgba(0, 0, 0, ${({ index }) => (index / 100) + index / 50 + 0.03 });
   border-radius: 5px;
   margin: 0;
+  border: 3px solid transparent;
+  flex-wrap: wrap;
+
+  @media (max-width: 880px) {
+    width: calc(70vw + ${({ index }) => index * 30}px);
+  }
 
   &:hover {
     border: 3px solid blue;

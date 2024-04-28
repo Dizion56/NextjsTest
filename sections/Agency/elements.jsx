@@ -12,7 +12,7 @@ export const StyledContainer = styled(({ height, ...props }) => (
   align-items: center;
   justify-items: center;
   display: block;
-  padding-top: 100px;
+  padding: 5rem 0;
 `;
 
 export const StyledBodyContainer = styled(({ height, ...props }) => (
